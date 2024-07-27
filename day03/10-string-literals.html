@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Literals</title>
+</head>
+<body>
+    <h2>String Literals</h2>
+
+    <script>
+        // String içinde "" ve '' kullanımı
+
+        let sentence_double_quotes = "Ayşe İstanbul'da yaşıyor.";
+        console.log(sentence_double_quotes); // Ayşe İstanbul'da yaşıyor.
+
+        let sentence_single_quotes = 'Ayşe "Javascript" öğreniyor.';
+        console.log(sentence_single_quotes); // Ayşe "Javascript" öğreniyor.
+
+        let _sentence = "Ayşe İstanbul'da yaşarken \"Javascript\" öğreniyor.";
+        console.log(_sentence); // Ayşe İstanbul'da yaşarken "Javascript" öğreniyor.
+
+        // `` back tick kullanımı
+        var firstName = "Ayşe";
+        var lastName = "Çelik";
+        var $salary = 25000;
+
+        console.log("Benim adım " + firstName + " " + lastName + ". " + $salary + " kadar maaş alıyorum."); // Benim adım Ayşe Çelik. 25000 kadar maaş alıyorum.
+
+        console.log(`Benim adım ${firstName} ${lastName}. ${$salary} kadar maaş alıyorum.`); // Benim adım Ayşe Çelik. 25000 kadar maaş alıyorum.
+
+    </script>
+</body>
+</html>

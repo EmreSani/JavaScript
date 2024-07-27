@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Value Practice</title>
+    <style>
+        * {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <button onclick="calculate()">Topla</button>
+    <div class="result"></div>
+
+    <script>
+
+        function calculate(){
+            let num1 = document.querySelector("#num1").value;
+            let num2 = document.querySelector("#num2").value;
+            let sum = Number(num1) + Number(num2);
+
+            document.querySelector(".result").innerHTML = "Sonuç: " + sum; // (Number(num1.value) + Number(num2.value))
+        }
+
+    </script>
+</body>
+</html>

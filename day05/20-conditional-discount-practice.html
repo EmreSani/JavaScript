@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İndirim Uygulaması</title>
+</head>
+<body>
+    <h2>İndirim Uygulaması</h2>
+
+    <input type="text" id="price">
+    <input type="button" value="Hesapla" onclick="calculate()">
+    <div class="result"></div>
+
+    <script>
+
+        // Bir Textbox tan alınan fiyat bilgisi 500 den büyükse %10 indirim uygulayıp sonucu yazan, 300 den büyükse %7 indirip uygulayıp sonucu yazan, değilse %5 indirip uygulayıp sonucu yazan programı yapınız. 
+
+        function calculate(){
+            let price = document.querySelector("#price").value;
+
+            if(price > 500){
+                price *= 0.9; // price = price * 0.9;
+            }
+            else if(price > 300){
+                price *= 0.93;
+            }
+            else {
+                price *= 0.95;
+            }
+
+            document.querySelector(".result").innerHTML = `Son fiyat: <b>${price}</b>`;
+            document.querySelector("#price").value = "";
+        }
+
+    </script>
+</body>
+</html>

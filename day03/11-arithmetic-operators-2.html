@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operators Practice</title>
+</head>
+<body>
+    <h2>Arithmetic Operators Practice</h2>
+
+    <script>
+
+        const s1 = 2024;
+        const s2 = 1980;
+
+        console.log("Yaş: " + s1 - s2); // "Yaş: 2024" - 1980 = NaN
+        console.log("Yaş: " + (s1 - s2)); // Yaş: 44
+        console.log(`Yaş: ${s1 - s2}`); // Yaş: 44
+
+        ///////////////////////////////
+
+        const pi = 3.14;
+        let r = 5;
+        let alan = pi*r**2; // Math.pow(r,2);
+        let cevre = 2*pi*r;
+        console.log(alan, cevre.toFixed(2)); // 78.5 31.40
+        console.log("Alan: " + alan, "Çevre: " + cevre); // Alan: 78.5 Çevre: 31.40
+
+
+        ///////////////////////////////
+
+        // Kodlar soldan sağa okunduğu için a++'da önce atama yapar sonra a'nın değerini artırır. ++a ise önce değer artırır sonra da atama yapar.
+        let a = 3, b = ++a, c = --a;
+        console.log(a, b, c); // 3 4 3
+
+        let x = 2, y = x++, z = x--;
+        console.log(x, y, z); // 2 2 3
+
+        a += 5; // a = a + 5;
+        console.log(a); // 8
+
+        x -= 5 // x = x - 5;
+        console.log(x); // -3
+
+        var k = 123;
+        console.log("10 ile bölümünden kalan: " + k%10); // 10 ile bölümünden kalan: 3
+
+    </script>
+</body>
+</html>

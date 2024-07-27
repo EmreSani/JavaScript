@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operators Ptactice</title>
+</head>
+<body>
+    <h2>Arithmetic Operators Ptactice</h2>
+
+    <script>
+        // Verilen bir sayının rakamları toplamını bulunuz.
+
+        let num = 987;
+        let unitsDigit;
+        let sum = 0;
+
+        unitsDigit = num % 10; // 7
+        sum = sum + unitsDigit; // 0 + 7 = 7
+        num = parseInt(num/10); // 98
+
+        unitsDigit = num % 10; // 8
+        sum = sum + unitsDigit; // 7 + 8 = 15
+        num = parseInt(num/10); // 9
+
+        unitsDigit = num % 10; // 9
+        sum = sum + unitsDigit; // 15 + 9 = 24
+        
+        console.log(sum); // 24
+
+
+    </script>
+</body>
+</html>

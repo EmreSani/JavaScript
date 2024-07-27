@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Operators</title>
+</head>
+<body>
+    <h2>Comparison Operators</h2>
+
+    <script>
+
+        let x = 50;
+        let y = 70;
+        let z = 100;
+
+        console.log(x == 50); // true
+        console.log(x == y); // false
+        console.log(x == "50"); // true çünkü == sadece value'ya bakar.
+        console.log(x === "50"); // false çünkü === data type'ı da kontrol eder.
+        console.log(x === 50); // true
+        console.log(x == 50n); // true
+        console.log(x === 50n); // false çünkü 50n bigint'tir.
+
+        console.log(x != 50); // false
+        console.log(x != "50"); // false
+        console.log(x !== "50"); // true
+        console.log(x !== 50); // false
+
+        console.log(x < y); // true
+        console.log(x <= z); // true
+        console.log(x < "75"); // true
+        console.log(x < "elma"); // false, karşılaştırma yapamadığı için false verir.
+
+    </script>
+</body>
+</html>

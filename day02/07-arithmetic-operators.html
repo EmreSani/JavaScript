@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operators</title>
+</head>
+<body>
+    <h2>Arithmetic Operators</h2>
+
+    <script>
+
+        var x = 5, y = 8, z = "15";
+
+        console.log(x + y); // 13 toplama
+        console.log(x + z); // 515 concatinate
+        console.log(x + y + z); // 1315
+        console.log(z + y + x); // 1585
+        console.log(z + (y + x)); // 1513
+
+        // JS datatype'a değil value'ya bakar.
+        let puan = "25";
+        puan = "3" * puan;
+        console.log(puan, typeof puan); // 75, number
+
+        let word = "Hello";
+        console.log(3 * word); // NaN = Not a Number // Hata değildir, bir değerdir.
+
+    </script>
+</body>
+</html>

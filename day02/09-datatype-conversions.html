@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type Conversions</title>
+</head>
+<body>
+    <h2>Data Type Conversions</h2>
+
+    <script>
+
+        var para = 500;
+        para = String(para); // para'nın yeni değeri "500" olur.
+        console.log(typeof para); // string
+
+        let payment = 1500;
+        payment = payment.toString(); // "1500" olur.
+        console.log(typeof payment) // string
+
+        const money = "100";
+        console.log(typeof money); // string
+
+        console.log(money + 15); // 10015
+        console.log(Number(money) + 15); // 115
+
+        console.log(Number("abc")); // NaN
+
+        var x = 150n;
+        var y = 5;
+        console.log(x + BigInt(y)); // 155n
+
+        // Boolean
+
+        let puan;
+        console.log(puan); // undefined
+        console.log(Boolean(puan)); // false
+
+        let salary = -12300;
+        console.log(Boolean(salary)); // true
+
+        console.log(Boolean("salary")); // true
+        console.log(Boolean("")); // false
+        console.log(Boolean(" ")); // true
+        console.log(Boolean(3-3)); // 0 olduğu için false verir
+        console.log(Boolean(Number("elma"))); // Number("elma") NaN verir. Boolean(NaN) da false verir.
+        console.log(Boolean(null)); // false
+
+        console.log((14*2/7)**2/4+5);
+
+    </script>
+</body>
+</html>

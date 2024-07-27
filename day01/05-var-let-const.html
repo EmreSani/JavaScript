@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var-let-const</title>
+</head>
+<body>
+    <h2>var-let-const</h2>
+
+    <script>
+        var x;
+        console.log(x); // undefined
+
+        // var ile tanımlanan değişkenler tekrar tanımlanabilir.
+        var x = 5;
+        var x = 7;
+        console.log(x); // 7
+
+        var y = 10;
+        y = 15;
+        console.log(y); // 15
+
+        // let ile tanımlanan değişkenler tekrar tanımlanamaz fakat değer güncellemesi yapılabilir.
+        let z = 15;
+        // let z = 25; // yeniden tanımlama hata verir.
+        z = 25; // yeni değer ataması
+        console.log(z); // 25
+
+        // const ile tanımlanan sabitlere başlangıç değeri vermek zorunludur ve bu değer değiştirilemez.
+        // const k; // hata verir
+        const k = 3;
+        // k = 5; // hata verir
+        console.log(k); // 3
+
+        // Scope
+        {
+            var m = 50;
+            let n = 70;
+            const t = 100;
+            console.log(n); // 70
+        }
+
+        console.log(m); // 50
+        // console.log(n); // block dışı olduğu için hata verir.
+        console.log(t); // t is not defined hatası verir.
+
+
+    </script>
+</body>
+</html>

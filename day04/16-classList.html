@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+    <style>
+        
+        .blue {
+            background-color: blue;
+        }
+        .pink {
+            background-color: pink;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="name blue">Merhaba Dünya</h1>
+
+    <script>
+
+        var styles = document.querySelector(".name").classList;
+        console.log(styles); // name blue
+
+        styles.add("pink"); // add ile pink class'ını ekledik, background pembe oldu.
+        console.log(styles); // name blue pink
+
+        styles.add("yellow"); // add ile yellow class'ını ekledik, background sarı oldu.
+        console.log(styles); // name blue pink yellow
+
+        styles.remove("yellow"); // remove ile yellow class'ını çıkardık, background tekrar pembe oldu.
+        console.log(styles); // name blue pink
+
+    </script>
+</body>
+</html>
