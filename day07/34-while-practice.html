@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while practice</title>
+</head>
+<body>
+    <h2>While Loop Practice</h2>
+
+    <input type="number" id="num" placeholder="Bir sayı giriniz...">
+    <button onclick="calculate()">Hesapla</button>
+    <h3></h3>
+
+    <script>
+        // Bir textbox tan alınan sayının, sayı değerini hesaplayıp sonucu bir h3 içinde gösteren programı yapınız. 8291 => 8+2+9+1 = 20
+
+        function calculate(){
+            var num = document.querySelector("#num").value;
+            var sum = 0;
+
+            while(num > 0){
+                let unitsDigit = num%10;
+                sum += unitsDigit;
+                num = parseInt(num/10); // Math.floor(num/10);
+            }
+
+            document.querySelector("h3").innerHTML = `Girdiğiniz sayının rakamlar toplamı: ${sum}`;
+        }
+
+        console.log(Math.floor(3.7)); // 3 çünkü Math.floor() her zaman alt değere yuvarlar.
+        console.log(Math.ceil(3.2)); // 4 çünkü Math.ceil() her zaman üst değere yuvarlar.
+        console.log(Math.round(3.7)); // 4 çünkü Math.floor() her zaman en yakın değere yuvarlar.
+        console.log(Math.round(3.4)); // 3
+
+    </script>
+    
+</body>
+</html>

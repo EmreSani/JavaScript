@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Circuit</title>
+</head>
+<body>
+    <h2>Short Circuit</h2>
+
+    <input type="number" placeholder="0'dan 100'e kadar bir sayı giriniz...">
+    <button onclick="showNum()">Göster</button>
+    <p></p>
+
+    <script>
+
+        function showNum(){
+            let num = document.querySelector("input").value;
+
+            /*if(num < 0 || num > 100){
+                alert("Lütfen 0'dan 100'e kadar bir sayı giriniz...");
+                document.querySelector("p").innerHTML = "";
+            }
+            else {
+                document.querySelector("p").innerHTML = num;
+            }*/
+
+            (num < 0 || num > 100) && alert("Lütfen 0'dan 100'e kadar bir sayı giriniz..."); // if block
+            (num < 0 || num > 100) || (document.querySelector("p").innerHTML = num); // else block
+
+        }
+
+    </script>
+
+</body>
+</html>

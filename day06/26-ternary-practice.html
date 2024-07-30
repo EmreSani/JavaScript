@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Practice</title>
+</head>
+<body>
+    <h2>Ternary Practice</h2>
+
+    <input type="radio" name="job" id="retired" onchange="calculate('r')">
+    <label for="retired">Emekli</label> <br>
+
+    <input type="radio" name="job" id="working" onchange="calculate('w')">
+    <label for="working">Çalışan</label>
+
+    <div class="result"></div>
+
+    <script>
+        // Çalışan seçildiğinde tam, emekli ise %10 kesinti uygulayarak maaşı gösteriniz. Bunu ternary kullanarak yapınız.
+
+        function calculate(workType){
+            let salary = 40000;
+
+            // salary = event.target.id == "retired" ? salary*0.9 : salary; // Bu şekilde yazdığımızda parametrelere gerek kalmaz.
+
+            salary = workType == "r" ? salary*0.9 : salary;
+
+            document.querySelector(".result").innerHTML = `Maaş: ${salary}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for loop practice</title>
+</head>
+<body>
+    <h2>İndirim Uygulaması</h2>
+
+    <input type="number" id="discount" placeholder="İndirim oranını giriniz...">
+    <button onclick="makeDiscount()">İndirimi Uygula</button>
+
+    <ul id="productList">
+        <li>Notebook <span>1500</span>$</li>
+        <li>Tablet <span>500</span>$</li>
+        <li>Klavye <span>100</span>$</li>
+        <li>Mouse <span>20</span>$</li>
+        <li>Memory Card <span>50</span>$</li>
+        <li>Headphone <span>500</span>$</li>
+        <li>Monitor <span>1000</span>$</li>
+        <li>Phone <span>2000</span>$</li>
+        <li>Computer <span>2500</span>$</li>
+    </ul>
+
+    <script>
+        // Bir ul listesinde ürün isimleri ve fiyat bilgileri bulunmaktadır. Textbox a girilen indirim oranı kadar listeye indirim uygulayan programı yazınız.
+
+        // 1 - İndirim oranını alacağız.
+        // 2 - Fiyatları alacağız.
+        // 3 - Fiyatlara indirim oranını uygulayacağız.
+        // 4 - Sayfaya yeni fiyatları gireceğiz.
+
+        function makeDiscount(){
+
+            let discount = document.querySelector("#discount").value;
+            let priceList = document.querySelectorAll("#productList li span");
+
+            console.log(priceList);
+
+            for(let i=0; i<priceList.length; i++){
+                
+                let price = priceList[i].innerHTML;
+
+                let newPrice = price - price*discount/100;
+
+                priceList[i].innerHTML = newPrice;
+
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
