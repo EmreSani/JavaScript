@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asal</title>
+    <style>
+        * {margin: 5px;}
+    </style>
+</head>
+<body>
+    
+    <input type="number" name="" id="num">
+    <button onclick="calculate()">Asal mı?</button>
+
+    <script>
+        // Bir sayının asal olup olmadığını bulan fonksiyonu yazınız.
+
+        function calculate(){
+            let num = document.querySelector("#num").value;
+            let counter = 0;
+
+            for(let i=2; i<num; i++){
+                if(num%i == 0){
+                    counter++;
+                    break;
+                }
+            }
+            counter > 0 ? alert(num + " asal değildir.") : alert(num + " asaldır.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h2>Functions</h2>
+
+    <input type="text" id="input" placeholder="Doğum yılınızı giriniz..." onchange="calculateAge5(this.value)">
+
+    <script>
+
+        function calculateAge(){
+            console.log(`Benim yaşım: ${2024 - 1980}`);
+        }
+
+        calculateAge();
+        
+        /////////////////////////////////
+
+        function calculateAge2(dateOfBirth){
+            console.log(`Benim yaşım: ${2024 - dateOfBirth}`);
+        }
+
+        calculateAge2(1980);
+        calculateAge2(1990);
+
+        ////////////////////////////////
+
+        function calculateAge3(dateOfBirth){
+            return `Benim yaşım: ${2024 - dateOfBirth}`;
+        }
+
+        let result = calculateAge3(2000);
+        console.log(result);
+
+        ///////////////////////////////
+
+        console.log(new Date()); // Tue Jul 30 2024 22:15:26 GMT+0300 (GMT+03:00)
+
+        function calculateAge4(dateOfBirth){
+            let thisYear = new Date().getFullYear();
+            return `Benim yaşım: ${thisYear - dateOfBirth}`;
+        }
+
+        console.log(calculateAge4(1980));
+
+        /////////////////////////////////
+
+        function calculateAge5(birthdate){
+            // let birthdate = document.querySelector("#input").value;
+            // let birthdate = event.target.value;
+
+            let thisYear = new Date().getFullYear();
+
+            document.write(`Benim yaşım: ${thisYear - birthdate}`);
+        }
+
+    </script>
+</body>
+</html>

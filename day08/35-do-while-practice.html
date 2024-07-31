@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do-While Factorial</title>
+</head>
+<body>
+
+    <h2>Factorial</h2>
+    <input type="text" name="" id="num">
+    <button onclick="calculate()">Hesapla</button>
+    <div id="result"></div>
+
+    <script>
+        // Textbox tan alınan sayının faktöriyelini bulan programı yapınız.
+
+        function calculate(){
+            let num = parseFloat(document.querySelector("#num").value);
+            let multiplication = 1;
+            console.log(num);
+
+            if(num == 0){
+                result.innerHTML = `Faktöriyel sonucu: 1`;
+                return;
+            }
+
+            if(num > 0 && Number.isInteger(num)){ // hiçlik, string ve negatif sayı kontrolünü yapmış olduk.
+
+                do {
+                    multiplication *= num;
+                    num--;
+                } while(num>0);
+    
+                result.innerHTML = `Faktöriyel sonucu: ${multiplication}`;
+
+            }
+            else {
+                result.innerHTML = `Lütfen geçerli bir sayı giriniz.`;
+            }
+            
+        }
+
+    </script>
+    
+</body>
+</html>
