@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global - Function Scopes</title>
+</head>
+<body>
+    <h2>Global - Function Scopes</h2>
+
+    <script>
+
+        var num = 5; // global scope olduğu için her yerden erişilir.
+
+        function myFunction(){
+            var x = 20; // function scope olduğu için sadece function içinden erişilir.
+            let y = 30;
+            const z = 40;
+
+            console.log(x, y, z); // 20 30 40
+            console.log(num); // 5
+
+            num = 7;
+        }
+
+        console.log(num); // 5 çünkü function henüz çağrılmamış.
+
+        myFunction();
+
+        // console.log(x, y, z); // x, y, z için "is not defined" hatası verir.
+
+        console.log(num); // 7
+
+        //////////////////////////////////////
+
+        let num2 = 15; // global scope
+
+        function myFunction2(){
+            let num2 = 25; // function scope
+            console.log(num2); // 25
+            num2 = 35;
+            console.log(num2); // 35
+        }
+
+        myFunction2(); // 25
+
+        console.log(num2); // 15 değeri global'dan gelir.
+
+    </script>
+</body>
+</html>
