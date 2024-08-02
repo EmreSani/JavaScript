@@ -1,0 +1,37 @@
+.card {
+    border: 2px solid brown;
+    padding: 7rem;
+    padding-top: 9rem;
+    margin: 3rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card #num {
+    border: 2px solid black;
+    border-radius: 3px;
+    background-color: lightblue;
+    padding: 5px 15px;
+    display: none;
+}
+
+.card button {
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.card .btn-start {
+    background-color: lightcoral;
+}
+
+.card .btn-guess {
+    background-color: greenyellow;
+    display: none;
+}
+
+.card #result {
+    margin-top: 3rem;
+}

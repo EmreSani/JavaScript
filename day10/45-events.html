@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        button {
+            padding: 5px 12px;
+            background-color: coral;
+            color: white;
+            font-size: 17px;
+            border-radius: 3px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Events</h2>
+
+    <button id="btn1" onclick="sayHello()">Hello</button>
+    <button id="btn2">Hello</button>
+    <button id="btn3">Hello</button>
+    <button id="btn4">Hello4</button>
+    <button id="btn5">Hello5</button>
+    <button id="btn6">Hello6</button>
+
+
+    <script>
+
+        // 1. yöntem -> onclick="sayHello()"
+        function sayHello(){
+            alert("Merhaba Dünya");
+        }
+
+        // 2. yöntem
+        btn2.onclick = sayHello;
+
+        // 3. yöndem
+        btn3.addEventListener("click", sayHello);
+
+        // Anonymous function ile kullanımı
+        btn4.onclick = () => alert("Merhaba Dünya");
+        btn5.addEventListener("click", ()=> alert("Merhaba Dünya"));
+
+        // some other events
+        btn6.addEventListener("dblclick", ()=> btn6.style.backgroundColor = "blue");
+        btn6.addEventListener("copy", ()=> btn6.style.color = "pink");
+
+    </script>
+</body>
+</html>
