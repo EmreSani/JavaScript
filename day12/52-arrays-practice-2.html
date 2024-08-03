@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Practice - 2</title>
+</head>
+<body>
+    <h2>Arrays Practice</h2>
+
+    <script>
+        // Şeklindeki dizi elemanlarının değerini %20 artıran fonksiyonu yazınız.
+
+        let prices = [123, 5666, 126, 67];
+        let prices2 = [100, 5000, 120, 60];
+
+        const calculatePrices = (arr, rate)=>{
+
+            if(!Array.isArray(arr) || arr.length == 0){
+                return;
+            }
+
+            for(let i=0; i<arr.length; i++){
+                arr[i] += arr[i]*rate/100;
+            }
+
+            return arr;
+
+        }
+
+        console.log(calculatePrices(prices, 20)); //  [147.6, 6799.2, 151.2, 80.4]
+        console.log(calculatePrices(prices2, 30)); // [130, 6500, 156, 78]
+
+    </script>
+</body>
+</html>

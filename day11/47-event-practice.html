@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Practice</title>
+    <style>
+        input, button {
+            margin: 7px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Not Uygulaması</h2>
+
+    <input type="number" placeholder="vize notu giriniz..." id="vize"> <br>
+    <input type="number" placeholder="final notu giriniz..." id="final"> <br>
+    <button id="btn">Hesapla</button>
+    <div id="result"></div>
+
+    <script>
+        // Butona basıldığında, iki textbox içinde 100 lük sistemde girilen notları kontrol edip, ortalamasını bulan ve bunu harf sistemine çeviren fonksiyonu yazınız.
+
+        btn.addEventListener("click", ()=>{
+
+            let vize = document.getElementById("vize").value;
+            let final = document.getElementById("final").value;
+
+            // bir input bile hatalıysa hata mesajını gösterecek şekilde ayarlıyoruz.
+            if(!isNoteValid(vize) || !isNoteValid(final)){
+                alert("Lütfen geçerli bir not giriniz.");
+                return;
+            }
+
+            let average = calculateAverage(vize, final);
+            let letterGrade = convertToLetter(average);
+
+            result.innerHTML = `Ortalama: ${average}, Harf Notu: ${letterGrade}`;
+
+        });
+
+
+        // ortalamayı bulan function
+        const calculateAverage = (x, y)=> (x*0.4 + y*0.6).toFixed(1);
+
+        // ortalamayı harf notuna çeviren function
+        const convertToLetter = (avg)=>{
+
+            let letter;
+
+            switch(true){
+                case (avg >= 90): letter = "A";
+                break;
+
+                case (avg >= 80): letter = "B";
+                break;
+
+                case (avg >= 70): letter = "C";
+                break;
+
+                case (avg >= 50): letter = "D";
+                break;
+
+                default: letter = "F";
+            }
+
+            return letter;
+        }
+
+        // doğruluk kontrolü yapan function
+        const isNoteValid = (point)=>{
+            point = parseInt(point);
+            return point >= 0 && point <= 100;
+        }
+
+        // console.log(convertToLetter(90));
+        // console.log(calculateAverage(90, 50));
+
+
+    </script>
+    
+</body>
+</html>

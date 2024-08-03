@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Practice</title>
+</head>
+<body>
+    <h2>Arrays Practice</h2>
+
+    <script>
+        // Bir array içindeki en büyük sayıyı bulan programı yazınız.
+
+        var numbers = [12,56,14,67,89,33,22]; 
+        var numbers2 = [20, 50, 250, 3000];
+
+        const calculate = (arr)=>{
+
+            let smallestNum = numbers[0]; // ilk değeri en küçük olarak kabul ediyoruz.
+            let largestNum = numbers[0]; // ilk değeri en büyük olarak kabul ediyoruz.
+            let sum = 0;
+
+            for(let i=0; i<arr.length; i++){
+
+                if(arr[i] < smallestNum){
+                    smallestNum = arr[i];
+                }
+
+                if(arr[i] > largestNum){
+                    largestNum = arr[i];
+                }
+
+                sum += arr[i];
+            }
+
+            return [smallestNum, largestNum, sum];
+
+        }
+
+        console.log(calculate(numbers)); // [12, 89, 293]
+        console.log(calculate(numbers)[0]); // 12
+        console.log(calculate(numbers)[1]); // 89
+        console.log(calculate(numbers)[2]); // 293
+
+    </script>
+</body>
+</html>

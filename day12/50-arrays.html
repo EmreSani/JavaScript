@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h2>Arrays</h2>
+
+    <script>
+
+        const kurslar = ["JavaScript", "HTML", "CSS", "Bootstrap"];
+
+        console.log(kurslar); // ['JavaScript', 'HTML', 'CSS', 'Bootstrap']
+        console.log(typeof kurslar); // object
+        console.log(kurslar instanceof Array); // true
+        console.log(kurslar[1]); // HTML
+        console.log(kurslar.length); // 4
+        console.log(kurslar[kurslar.length - 1]); // Bootstrap
+        console.log(kurslar[0].length); // 10, JavaScript'in uzunluğunu aldı.
+
+        kurslar[0] = "Java";
+        kurslar[1] = "React";
+        kurslar[2] = "Apex";
+        console.log(kurslar); //  ['Java', 'React', 'Apex', 'Bootstrap']
+        kurslar[4] = "Angular";
+        console.log(kurslar); // ['Java', 'React', 'Apex', 'Bootstrap', 'Angular']
+
+        kurslar = ["Phyton", "Ruby"]; // "Assignment to constant variable" hatası verir.
+
+        // Object ve array non-primitive data olduğu için const ile tanımlanmış olsa bile içindeki değerler değiştirilebilir fakat yeni bir atama yapılamaz.
+
+    </script>
+</body>
+</html>
