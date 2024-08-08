@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce practice</title>
+</head>
+<body>
+    <h2>reduce practice</h2>
+
+    <script>
+        // ÖRNEK: Bir Firma, 15000 TL den az olan maaşlara %10 zam yapmak istiyor ve zam yapılan bu kişilere toplam kaç TL ödeneceğini bilmek istiyor.  İlgili programı yazınız.
+
+        salaries = [13000, 12890, 13500, 24200, 27000, 12500];
+
+        let totalSalary = salaries.filter((salary)=> salary < 15000) //  [13000, 12890, 13500, 12500]
+        .map((salary)=>Math.round(salary*1.1)) //  [14300, 14179, 14850, 13750]
+        .reduce((total, salary)=> total + salary, 0);
+
+        console.log(totalSalary); // 57079
+    </script>
+</body>
+</html>

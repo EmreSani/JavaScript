@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach Practice</title>
+</head>
+<body>
+    <h2>forEach Practice</h2>
+
+    <script>
+        // ÖRNEK: Belirtilen dizinin her bir elamanının 5 katını alarak ayrı bir dizide saklayan uygulamayı forEach() metodu ile yazınız.
+
+        let numbers = [-5, 24, -13, 7];
+
+        let newNumbers = [];
+
+        numbers.forEach((num)=>newNumbers.push(num*5));
+
+        /* numbers.forEach((num)=>{
+            newNumbers.push(num*5);
+        });*/ 
+
+        console.log(newNumbers); //  [-25, 120, -65, 35]
+
+        ///////////////////////////////
+
+        let newNumbers2 = numbers.map((num)=>num*5);
+
+        /*let newNumbers2 = numbers.map((num)=>{
+            return num*5;
+        });*/
+
+        console.log(newNumbers2); // [-25, 120, -65, 35]
+
+    </script>
+</body>
+</html>

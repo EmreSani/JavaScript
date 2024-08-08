@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce</title>
+</head>
+<body>
+    <h2>reduce</h2>
+
+    <script>
+
+        let coordinates = [-100, 150, -32, 43, -20];
+
+        // forEach ile toplamı
+
+        let sum = 0;
+        coordinates.forEach((num)=>sum += num);
+
+        console.log(sum); // 41
+
+        // reduce ile toplamı
+
+        let totalCoordinates = coordinates.reduce((sum, num)=> sum + num, 0);
+
+        console.log(totalCoordinates); // 41
+        console.log(totalCoordinates / coordinates.length); // 8.2
+
+        ///////////////////////////////////////
+
+        // tüm sayıların çarpımını alınız.
+
+        let numbers = [3, 7, 15, 25];
+
+        let reduceNumbers = numbers.reduce((multiplication, num, i)=> {
+            console.log(i); // index değerlerini alır.
+            return multiplication * num}, 1);
+
+        console.log(reduceNumbers); // 7875
+
+        ////////////////////////////////////////////
+
+        let decimals = [1.2, 7.3, 4.8, 5.7];
+
+        // Eğer ilk değer verirsek sum o ilk değeri alır.
+        // İlk değer tanımlanmazsa sum arrayin ilk elemanını değer olarak alır.
+
+        let total = decimals.reduce((sum, num)=>sum + Math.round(num), 0);
+
+        console.log(total); // 19
+
+        let total2 = decimals.reduce((sum, num)=>sum + Math.round(num));
+
+        console.log(total2); // 19.2
+
+    </script>
+</body>
+</html>

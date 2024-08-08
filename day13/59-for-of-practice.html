@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for of practice</title>
+</head>
+<body>
+    <h2>for-of practice</h2>
+
+    <script>
+
+        // ÖRNEK: Dizideki elemanları birleştirerek tek bir String haline getiren uygulamayı FOR OF ile yazınız.
+
+        let flowers = ["Rose", "Tulip", "Lilly", "Daisy", "Violet"];
+
+        console.log(flowers.join(" ")); // Rose Tulip Lilly Daisy Violet
+
+        const flowersFunction = (arr)=>{
+
+            let strFlowers = "";
+            for(let element of arr){
+                strFlowers += element + " ";
+            }
+
+            return strFlowers;
+        }
+
+        let flowersString = flowersFunction(flowers);
+        console.log(flowersString); // Rose Tulip Lilly Daisy Violet
+    </script>
+</body>
+</html>

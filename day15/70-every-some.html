@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>every - some</title>
+</head>
+<body>
+    <h2>every - some</h2>
+
+    <script>
+
+        // Fiyatların hepsinin 0'dan büyük olup olmadığını kontrol ediniz. Negatif fiyat olmamlıdır.
+
+        let prices = [250, 500, 1500, 50, -3000, 20000];
+
+        let checkEvery = prices.every((price)=>price > 0); // AND mantığıyla çalışır.
+        console.log(checkEvery); // true
+
+        let checkSome = prices.some((price)=>price < 0); // OR mantığıyla çalışır.
+        console.log(checkSome); // false
+
+    </script>
+    
+</body>
+</html>

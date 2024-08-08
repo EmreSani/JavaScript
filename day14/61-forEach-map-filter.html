@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach - map - filter</title>
+</head>
+<body>
+    <h2>forEach - map - filter</h2>
+    
+    <script>
+
+        var numbers = [65, 7, 38, 26];
+
+        // for-of loop
+        for(let num of numbers){
+            console.log(num);
+        }
+
+        // forEach methodu arrayin tüm elemanlarını sırasıyla function'ın parametresine verir.
+        // 2. parametreye de index değerlerini verir.
+        numbers.forEach((num, i)=>{
+            console.log(num + " " + i);
+        });
+
+        // map methodu yeni bir array döndürür. Sırasıyla tüm elemanları alır.
+        let mapArray = numbers.map((num)=>{
+            return num*2;
+        });
+
+        console.log(mapArray); // [130, 14, 76, 52]
+        console.log(numbers); // [65, 7, 38, 26]
+
+        // filter methodu filtreleme yaparak yeni bir array döndürür. True olan elemanları alır.
+        let filterArray = numbers.filter((num)=>{
+            return num > 18;
+        });
+
+        console.log(filterArray); //  [65, 38, 26]
+
+    </script>
+</body>
+</html>

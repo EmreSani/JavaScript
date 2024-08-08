@@ -17,16 +17,24 @@
         // Bir sayının asal olup olmadığını bulan fonksiyonu yazınız.
 
         function calculate(){
-            let num = document.querySelector("#num").value;
+            let num = Number(document.querySelector("#num").value);
             let counter = 0;
 
-            for(let i=2; i<num; i++){
-                if(num%i == 0){
-                    counter++;
-                    break;
+            if(num > 1 && Number.isInteger(num)){
+
+                for(let i=2; i<num; i++){
+                    if(num%i == 0){
+                        counter++;
+                        break;
+                    }
                 }
+                counter > 0 ? alert(num + " asal değildir.") : alert(num + " asaldır.");
+
             }
-            counter > 0 ? alert(num + " asal değildir.") : alert(num + " asaldır.");
+            else {
+                alert("Lütfen geçerli bir sayı giriniz.");
+            }
+            
         }
     </script>
 </body>

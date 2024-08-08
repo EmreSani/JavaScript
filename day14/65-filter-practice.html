@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter practice</title>
+</head>
+<body>
+    <h2>filter practice</h2>
+
+    <script>
+        // ÖRNEK: Koordinatlar dizisindeki negatif koordinatları alıp yeni bir dizide saklayan uygulamayı filter() ile yapınız.
+
+        let coordinates = [-100, 150, -32, 43, -20];
+
+        let negativeCoordinates = coordinates.filter((item) => item < 0);
+
+        console.log(negativeCoordinates); //  [-100, -32, -20]
+
+        ///////////////////////////////
+
+        // ÖRNEK: Bireyler dizisindeki kişilerden adı "Belirtilen" harf ile başlayanları  seçerek ayrı bir diziye saklayan uygulamayı yazınız.
+
+        let people = ["Ayşe", "Ali", "Can", "Canan", "John", "Conan", "Messi", "Ronaldo"];
+
+        function filterPeople(array, letter){
+            letter = letter.toUpperCase(); 
+            return array.filter((element)=>element.startsWith(letter));
+        }
+
+        console.log(filterPeople(people, "a")); //  ['Ayşe', 'Ali']
+        console.log(filterPeople(people, "C")); //  ['Can', 'Canan', 'Conan']
+    </script>
+</body>
+</html>

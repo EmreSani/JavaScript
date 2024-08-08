@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for in - for-of loops</title>
+</head>
+<body>
+
+    <h2>for in - for-of loops</h2>
+
+    <script>
+
+        var fruits = ["apple", "pear", "cherry", "banana", "mango"];
+
+        var person = {
+            firstName: "Ayşe",
+            lastName: "Çelik",
+            age: 25
+        }
+
+        for(let i=0; i<fruits.length; i++){
+            console.log(fruits[i]);
+        }
+
+        console.log("///////////////////");
+
+        // for-in loop
+
+        for(let i in fruits){ // i, index değerlerini alır.
+            console.log(fruits[i]);
+        }
+
+        console.log("///////////////////");
+
+        for(k in person){ // k, sırasıyla property'leri alır.
+            console.log(k + ": " + person[k]); // firstName: Ayşe, lastName: Çelik, age: 25
+        }
+
+        console.log("///////////////////");
+
+        // for-of loop
+
+        for(f of fruits){ // f, sırasıyla array elemanlarını alır.
+            console.log(f);
+        }
+        
+        for(k of person){ // object'lerde "not iterable" hatası verir.
+            console.log(k);
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>
