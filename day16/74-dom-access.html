@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Access</title>
+</head>
+<body>
+    <h2>DOM Access</h2>
+
+    <section>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptates accusantium animi asperiores consequuntur eveniet iure excepturi nam maiores facilis, ut quasi repellat dolore inventore natus eligendi illum rerum cumque.z</p>
+
+            <ul id="list">
+                <li><a href="">Home</a></li>
+                <li><a href="" id="about">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Blog</a></li>
+            </ul>
+
+            <h3>list'ten sonra gelir.</h3>
+        </div>     
+    </section>
+
+    <script>
+
+        let list = document.getElementById("list");
+
+        // closest
+        console.log(list.closest("section")); // Hiyerarşik olarak yukarısındaki en yakın section'ı alır.
+
+        // children
+        console.log(list);
+        console.log(list.children[1]);
+        console.log(list.firstElementChild);
+        console.log(list.lastElementChild);
+
+        // parentElemet
+        console.log(list.parentElement.parentElement); // önce div'i sonra section'ı alır.
+
+        // sibling elements
+        console.log(list.previousElementSibling); // p'yi alır.
+        console.log(list.nextElementSibling); // h3'ü alır.
+
+
+    </script>
+
+</body>
+</html>

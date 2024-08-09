@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent</title>
+</head>
+<body>
+    <h2>textContent</h2>
+
+    <p>JavaScript, React, <span style="color:blue; display:none">Bootstrap,</span> Phyton</p>
+
+    <script>
+        let p = document.querySelector("p");
+
+        console.log(p.innerText); // JavaScript, React, Phyton
+        console.log(p.innerHTML); // JavaScript, React, <span style="color:blue; display:none">Bootstrap,</span> Phyton
+        console.log(p.textContent); // JavaScript, React, Bootstrap, Phyton
+    </script>
+</body>
+</html>

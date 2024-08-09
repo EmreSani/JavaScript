@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+    <style>
+        .blue {
+            background-color: blue;
+        }
+        .pink {
+            background-color: pink;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h2>classList</h2>
+
+    <button id="btn1">Add</button>
+    <button id="btn2">Remove</button>
+    <button id="btn3">Toggle</button>
+    <button id="btn4">Replace</button>
+
+    <script>
+
+        let h2 = document.querySelector("h2");
+
+        btn1.onclick = ()=> h2.classList.add("blue");
+        btn2.onclick = ()=> h2.classList.remove("blue");
+        btn3.onclick = ()=> h2.classList.toggle("pink");
+        btn4.onclick = ()=> h2.classList.replace("blue", "yellow");
+    </script>
+</body>
+</html>
